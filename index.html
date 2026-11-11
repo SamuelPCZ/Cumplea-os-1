@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¡Feliz cumpleaños Fabi! 🎁</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <main class="scene" id="scene">
+  <!-- Regalo cerrado -->
+    <section class="gift-stage" id="giftStage">
+      <p class="hint" id="hint">Fabi, toca el regalo para abrirlo</p>
+      <button type="button" class="gift" id="giftBtn" aria-label="Abrir regalo">
+        <span class="gift__shadow"></span>
+        <span class="gift__box">
+          <span class="gift__lid" id="giftLid">
+            <span class="gift__bow"></span>
+          </span>
+          <span class="gift__body">
+            <span class="gift__ribbon-v"></span>
+            <span class="gift__ribbon-h"></span>
+          </span>
+        </span>
+      </button>
+    </section>
+
+    <!-- Galería (oculta hasta abrir) -->
+    <section class="gallery hidden" id="gallery" aria-live="polite">
+      <h1 class="gallery__title">¡Feliz cumpleaños Fabi! 🎂</h1>
+      <p class="gallery__subtitle">Con mucho cariño de tus amigos</p>
+
+      <div class="carousel">
+        <button type="button" class="carousel__nav carousel__nav--prev" id="prevBtn" aria-label="Foto anterior">‹</button>
+
+        <div class="carousel__viewport">
+          <div class="carousel__track" id="track">
+            <figure class="slide active" data-index="0">
+              <img src="images/foto1.png" alt="Mensaje de Samu para Fabi" />
+              <figcaption>Samu</figcaption>
+            </figure>
+            <figure class="slide" data-index="1">
+              <img src="images/foto2.png" alt="Mensaje de Xime para Fabi" />
+              <figcaption>Xime</figcaption>
+            </figure>
+            <figure class="slide" data-index="2">
+              <img src="images/foto3.png" alt="Mensaje de Ani para Fabi" />
+              <figcaption>Ani</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <button type="button" class="carousel__nav carousel__nav--next" id="nextBtn" aria-label="Foto siguiente">›</button>
+      </div>
+
+      <div class="dots" id="dots" role="tablist" aria-label="Elegir foto"></div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
